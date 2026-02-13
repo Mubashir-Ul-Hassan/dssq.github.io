@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSSQ — Data Science Society Quest | QUEST Nawabshah</title>
+    <meta name="description" content="Data Science Society Quest (DSSQ) at Quaid-e-Awam University of Engineering, Science and Technology Nawabshah. Join the quest for data-driven innovation.">
+    <link rel="icon" type="image/png" href="images/society-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Background Mesh -->
+    <canvas id="meshCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/society-logo.png" alt="DSSQ Logo" class="nav-logo-img">
+                <div class="nav-logo-text">
+                    <span class="logo-main">DSSQ</span>
+                    <span class="logo-sub">Data Science Society Quest</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#join" class="nav-link">Join Us</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-logos">
+                <img src="images/university-logo.png" alt="QUEST Logo" class="hero-logo quest-logo">
+                <div class="hero-logo-divider"></div>
+                <img src="images/society-logo.png" alt="DSSQ Logo" class="hero-logo dssq-logo">
+            </div>
+            <div class="hero-badge">
+                <span class="badge-pulse"></span>
+                Department of Data Science — QUEST Nawabshah
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line">Data Science</span>
+                <span class="hero-title-line gradient-text">Society Quest</span>
+            </h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <p class="hero-description">
+                Embark on a journey through data analysis, machine learning, and artificial intelligence. 
+                Join a community of passionate data enthusiasts shaping the future with data.
+            </p>
+            <div class="hero-cta">
+                <a href="#join" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    <span>Join the Quest</span>
+                    <span class="btn-shine"></span>
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/company/data-science-society-quest" target="_blank" class="linkedin-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Follow us on LinkedIn</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-cue">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who We Are</span>
+                <h2 class="section-title">About <span class="gradient-text">DSSQ</span></h2>
+            </div>
+            <div class="about-layout">
+                <div class="about-main">
+                    <div class="about-card glass-card">
+                        <div class="about-icon-row">
+                            <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+                            <h3>Our Mission</h3>
+                        </div>
+                        <p>The Data Science Society Quest (DSSQ) is a student-driven community at 
+                           Quaid-e-Awam University of Engineering, Science and Technology, Nawabshah. 
+                           We uncover the intricacies of data analysis, machine learning, and artificial 
+                           intelligence — bringing together individuals eager to explore the vast 
+                           landscape of data science.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="about-icon-row">
+                            <div class="about-icon"><i class="fas fa-eye"></i></div>
+                            <h3>Our Vision</h3>
+                        </div>
+                        <p>We foster collaboration and knowledge exchange through hands-on workshops, 
+                           insightful seminars, and engaging discussions led by experts in the field. 
+                           Whether you're a seasoned data professional or a curious beginner, DSSQ 
+                           promises an enriching experience that broadens your understanding of the 
+                           ever-evolving world of data.</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="stat-value" data-target="20">0</div>
+                        <div class="stat-label">Workshops<br>Conducted</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-value" data-target="100">0</div>
+                        <div class="stat-label">Active<br>Members</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-value" data-target="15">0</div>
+                        <div class="stat-label">Projects<br>Delivered</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-value" data-target="30">0</div>
+                        <div class="stat-label">Events<br>Organized</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section activities" id="activities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="gradient-text">Activities</span></h2>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card glass-card">
+                    <div class="activity-number">01</div>
+                    <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Hands-on Workshops</h3>
+                    <p>Interactive sessions on Machine Learning, Python, Data Visualization, ATS-optimized CV building, and AI tools.</p>
+                </div>
+                <div class="activity-card glass-card">
+                    <div class="activity-number">02</div>
+                    <div class="activity-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <h3>Expert Seminars</h3>
+                    <p>Insightful talks by industry professionals and academic experts on cutting-edge data science topics.</p>
+                </div>
+                <div class="activity-card glass-card">
+                    <div class="activity-number">03</div>
+                    <div class="activity-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Bootcamps</h3>
+                    <p>Intensive training programs on Agentic AI, Generative AI, Deep Learning, and NLP fundamentals.</p>
+                </div>
+                <div class="activity-card glass-card">
+                    <div class="activity-number">04</div>
+                    <div class="activity-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Hackathons & Competitions</h3>
+                    <p>Data science challenges and coding competitions that push boundaries and foster innovation.</p>
+                </div>
+                <div class="activity-card glass-card">
+                    <div class="activity-number">05</div>
+                    <div class="activity-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Networking Events</h3>
+                    <p>Meet and connect with data enthusiasts, industry leaders, and fellow learners in the data community.</p>
+                </div>
+                <div class="activity-card glass-card">
+                    <div class="activity-number">06</div>
+                    <div class="activity-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Research Projects</h3>
+                    <p>Collaborative research initiatives in ML, computer vision, NLP, and real-world data analytics use cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Leadership</span>
+                <h2 class="section-title">Our <span class="gradient-text">Team</span></h2>
+            </div>
+            <div class="team-grid">
+                <!-- HOD -->
+                <div class="team-card team-card-hod glass-card">
+                    <div class="team-card-badge">Department Head</div>
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder hod-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h3 class="team-name">Prof. Dr. Mehwish Leghari</h3>
+                    <p class="team-role">Head of Department — Data Science</p>
+                    <p class="team-org">Quaid-e-Awam University of Engineering, Science & Technology</p>
+                    <div class="team-divider"></div>
+                    <p class="team-desc">Guiding the vision and academic excellence of the Department of Data Science at QUEST Nawabshah.</p>
+                </div>
+
+                <!-- President -->
+                <div class="team-card team-card-president glass-card">
+                    <div class="team-card-badge president-badge">Founder & President</div>
+                    <div class="team-avatar">
+                        <img src="images/president.jpg" alt="Mubashir Ul Hassan" class="avatar-img">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h3 class="team-name">Mubashir Ul Hassan</h3>
+                    <p class="team-role">Founder & President — DSSQ</p>
+                    <p class="team-org">Aspiring Data Scientist | ML, DL & Generative AI</p>
+                    <div class="team-divider"></div>
+                    <p class="team-desc">Leading DSSQ since 2023, organizing workshops, AI bootcamps, and hands-on ML sessions to foster a thriving data science community.</p>
+                    <div class="team-links">
+                        <a href="https://www.linkedin.com/in/mubashir-ul-hassan/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Mubashir-Ul-Hassan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="section join" id="join">
+        <div class="container">
+            <div class="join-content glass-card">
+                <div class="join-glow"></div>
+                <div class="section-header">
+                    <span class="section-tag">Get Involved</span>
+                    <h2 class="section-title join-title">Join the <span class="gradient-text">Quest</span></h2>
+                </div>
+                <p class="join-text">
+                    Whether you're a seasoned data professional or a curious beginner, 
+                    DSSQ welcomes everyone eager to explore the power of data. 
+                    Connect with us, join our community, and discover the incredible 
+                    potential of data science!
+                </p>
+                <div class="join-actions">
+                    <a href="https://www.linkedin.com/company/data-science-society-quest" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Follow on LinkedIn</span>
+                        <span class="btn-shine"></span>
+                    </a>
+                </div>
+                <div class="join-logos">
+                    <img src="images/university-logo.png" alt="QUEST" class="join-logo">
+                    <img src="images/society-logo.png" alt="DSSQ" class="join-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/society-logo.png" alt="DSSQ" class="footer-logo-img">
+                    <div>
+                        <span class="footer-title">Data Science Society Quest</span>
+                        <span class="footer-subtitle">QUEST Nawabshah</span>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <p>© 2026 Data Science Society Quest. All rights reserved.</p>
+                    <p class="footer-uni">Quaid-e-Awam University of Engineering, Science & Technology, Nawabshah</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/data-science-society-quest" target="_blank" class="footer-linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
