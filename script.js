@@ -3,6 +3,23 @@
    JavaScript: Animations & Interactions
    ============================================ */
 
+// ===== DYNAMIC FAVICON =====
+(function () {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function () {
+        const c = document.createElement('canvas');
+        c.width = 32; c.height = 32;
+        const cx = c.getContext('2d');
+        cx.drawImage(img, 0, 0, 32, 32);
+        const link = document.querySelector("link[rel='shortcut icon']") || document.createElement('link');
+        link.rel = 'shortcut icon';
+        link.href = c.toDataURL('image/png');
+        document.head.appendChild(link);
+    };
+    img.src = 'images/society-logo.png';
+})();
+
 // ===== ANIMATED MESH BACKGROUND =====
 const canvas = document.getElementById('meshCanvas');
 const ctx = canvas.getContext('2d');
@@ -203,7 +220,7 @@ revealTargets.forEach(el => revealObserver.observe(el));
 
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth' });
